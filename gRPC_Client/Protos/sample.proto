@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+//import "google/protobuf/empty.proto";
+
+option csharp_namespace = "GrpcServer";
+
+package Sample;
+
+service SampleService {
+	// method call
+	rpc LoadDetails(RequestDetails)returns (ResponseDetails);
+	rpc LoadEmployeeDetails(RequestEmployees)  returns (stream ResponseDetails);
+}
+
+message RequestEmployees{
+
+}
+message RequestDetails{
+	string EmployeeName=1;
+	string Address=2;
+	int32 phone=3;
+	string email=4;
+	bool status=5;
+
+}
+message ResponseDetails{
+	string EmployeeName=1;
+	string Address=2;
+	int32 phone=3;
+	string email=4;
+	bool status=5;
+}

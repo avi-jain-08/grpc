@@ -1,0 +1,2 @@
+obj\Debug\netcoreapp3.1/Sample.cs \
+obj\Debug\netcoreapp3.1/SampleGrpc.cs: Protos/sample.proto
